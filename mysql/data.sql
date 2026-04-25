@@ -57,8 +57,8 @@ CREATE TABLE reports (
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- 1. 유저 데이터 (ID 1번 확실히 생성)
-INSERT INTO users (id, email, password, username, role, selected_persona, onboarding_completed, created_at)
-VALUES (1, 'test@test.com', '$2a$10$8.UnVuG9HHgffUDAlk8qfOuVGkqRzgVymGe07xd00DMxs.TVuHOnu', '효재', 'USER', 'BEGINNER', TRUE, NOW())
+INSERT INTO users (email, password, username, role, onboarding_completed)
+VALUES ('test@test.com', '$2a$10$.mpvpjYHKGukSTvbCukWNusFWU/lHUBCmHjp3Un2mz6qjrOg9z/LC', '효재', 'USER', TRUE);
     ON DUPLICATE KEY UPDATE id=id;
 
 -- 2. 운동 종목 데이터
